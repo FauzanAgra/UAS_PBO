@@ -51,7 +51,7 @@ public class ControllerZakatFitrah {
         frame.getTf_nama().setText(lmzf.get(row).getNama());
         frame.getTf_alamat().setText(lmzf.get(row).getAlamat());
         frame.getTf_jmljiwa().setText(String.valueOf(lmzf.get(row).getJml_jiwa()));
-        frame.getTf_total().setText(String.valueOf(lmzf.get(row).getTotal()));
+        frame.getTf_total().setText("Rp. " + String.valueOf(lmzf.get(row).getTotal()));
     }
     
     public void insert(){
