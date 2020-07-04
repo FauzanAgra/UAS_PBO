@@ -83,12 +83,15 @@ public class ControllerZakatFitrah {
     }
     
     public void update(){
+        String total = frame.getTf_total().getText();
+        String[] split = total.split(" ");
+        String Bagian1 = split[1];
         if(!frame.getTf_idzakat().getText().trim().isEmpty()){
             ModZakatFitrah mzf = new ModZakatFitrah();
             mzf.setNama(frame.getTf_nama().getText());
             mzf.setAlamat(frame.getTf_alamat().getText());
             mzf.setJml_jiwa(Integer.valueOf(frame.getTf_jmljiwa().getText()));
-            mzf.setTotal(Integer.valueOf(frame.getTf_total().getText()));
+            mzf.setTotal(Integer.valueOf(Bagian1));
             mzf.setNo(Integer.valueOf(frame.getTf_idzakat().getText()));
             
             implZakatFitrah.update(mzf);
